@@ -6,4 +6,5 @@
     <suppress files="App.java" checks="HideUtilityClassConstructor"/>
     <suppress files="App.java" checks="MagicNumber"/>
     <suppress files=".*Test.java" checks="MethodName"/>
+    <suppress files=".*Test.java" checks="MagicNumber"/>
 </suppressions>

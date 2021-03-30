@@ -1,6 +1,6 @@
 package me.weldnor.domain;
 
-public class Matrix implements Cloneable {
+public class Matrix {
     private final long[][] data;
 
     public Matrix(int height, int width) {
@@ -25,6 +25,14 @@ public class Matrix implements Cloneable {
 
     public int getWidth() {
         return data[0].length;
+    }
+
+    public long[][] toArray() {
+        long[][] dataCopy = data.clone();
+        for (int i = 0; i < getWidth(); i++) {
+            dataCopy[i] = dataCopy[i].clone();
+        }
+        return dataCopy;
     }
 
     @Override
